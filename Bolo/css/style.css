@@ -1,0 +1,106 @@
+body{
+    background-color:#fff9f0;
+}
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.botoes {
+    display: inline-block;
+    padding: 30px 60px;
+    background-color: #ffe2bf;
+    border-radius: 8px;
+    font-size: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    color:black;
+    transition: transform 0.2s ease;
+}
+
+.botoes:hover{
+    scale: 40px 70px;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.botaozao {
+    display: inline-block;
+    background-color:  #ffe2bf;
+    padding: 30px 60px;
+    font-size: 30px;
+    border-radius: 8px;
+    text-decoration: none;;
+    color:black;
+    transition: transform 0.2s ease;
+}
+
+.botaozao:hover {
+    scale: 40px 70px;
+    cursor: pointer;
+    transform: scale(1.1);  
+}
+
+.container{
+    display: flex;
+    gap: 15px;
+    margin: 20px;
+    justify-content: center;
+}
+
+.cabecaulho,
+.fim{
+    background:  #2c1e12;
+    padding: 55px 25px;
+    text-align:center;
+    border-radius: 10px;
+}
+
+.titulotufo{
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #ffe2bf;
+}
+
+
+.layout{
+    display: grid;
+    grid-template-columns: 0.7fr 2fr 0.7fr;
+    gap: 30px;
+    align-items: center;
+    padding: 40px 10px;
+}
+
+.direita,
+.esquerda{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.direita img,
+.esquerda img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.receita{
+    text-align: justify;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #2c1e12;
+
+}
+
+footer{
+    color: #ffe2bf;
+}
+img{
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
