@@ -1,0 +1,15 @@
+.topo,
+.chao{
+    background: rgba(175, 121, 130, 0.897);
+    padding: 55px 25px;
+    text-align:center;
+}
+
+*{
+    justify-content: center;
+    text-align: center;
+}
+
+body{
+    background-color: pink
+}
