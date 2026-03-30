@@ -6,7 +6,6 @@ body {
     min-height: 100vh;
     padding: 0%;
     background-color: var(--cor-fundo);
-
 }
 
 header {
@@ -40,7 +39,6 @@ header {
     justify-content: center;
     background-color: var(--cor-azul);
     color: var(--cor-texto2);
-
 }
 
 .container {
@@ -113,7 +111,6 @@ nav a {
     height: 0;
 }
 
-
 #tema:checked~.conteudo {
     --cor-fundo: #2c3e50;
     --cor-texto1: #f0f0f5;
@@ -135,24 +132,13 @@ nav a {
     align-items: center;
 }
 
-.switch input {
-    display: none;
-}
-
-.switch {
-    width: 20px;
-    height: 20px;
-    background-color: var(--cor-texto2);
-    border-radius: 50%;
-    cursor: pointer;
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    transition: all 0.3s ease;
-     margin-top: 14px;
-}
-
-#tema:checked ~ .conteudo .switch {
-    background-color: yellow;
+#tema:checked~.conteudo .switch {
     transform: scale(1.2);
+    transform: rotate(180deg);
+    animation: girar 0.5s linear;
 }
+@keyframes girar {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(180deg); }
+}
+
