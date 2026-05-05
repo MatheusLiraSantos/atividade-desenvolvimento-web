@@ -11,18 +11,89 @@
 <body>
     <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand">Tarefas</a>
+            <a class="navbar-brand">Tarefassss</a>
         </div>
     </nav>
 
     <div class="container-fluid text-center mt-4">
-        <h1>Tarefas muito importantes 🚨🚨🚨 </h1>
+        <h1>🚨🚨🚨 Anote suas tarefas importantissimas aqui 🚨🚨🚨 </h1>
     </div>
-    <div class="input-group input-group-lg">
-        <span class="input-group-text" id="inputGroup-sizing-lg">Digite sua tarefa:</span>
-        <input type="text" class="form-control" aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-lg">
+    <div class="input-group input-group-lg container mt-4">
+        <input type="text" id="inputTarefa" class="form-control" placeholder="Digite sua tarefa">
     </div>
+
+    <div class="container mt-4">
+        <div id="listaTarefas"></div>
+    </div>
+
+    <script>
+        const input = document.getElementById("inputTarefa");
+        const lista = document.getElementById("listaTarefas");
+
+        function adicionarTarefa() {
+            const texto = input.value;
+
+            const tarefa = document.createElement("div");
+            tarefa.className = "card p-3 mt-2 bg-light";
+
+            const titulo = document.createElement("p");
+            titulo.innerText = texto;
+
+            const btnBaixa = document.createElement("button");
+            btnBaixa.type = "button";
+            btnBaixa.innerText = "Baixa";
+            btnBaixa.className = "btn btn-outline-success btn-sm me-1";
+
+            btnBaixa.onclick = function () {
+                btnBaixa.className = "btn btn-success btn-sm me-1";
+                btnMedia.className = "btn btn-outline-warning btn-sm me-1";
+                btnAlta.className = "btn btn-outline-danger btn-sm me-1";
+            };
+
+            const btnMedia = document.createElement("button");
+            btnMedia.type = "button";
+            btnMedia.innerText = "Média";
+            btnMedia.className = "btn btn-outline-warning btn-sm me-1";
+
+            btnMedia.onclick = function () {
+                btnBaixa.className = "btn btn-outline-success btn-sm me-1";
+                btnMedia.className = "btn btn-warning btn-sm me-1";
+                btnAlta.className = "btn btn-outline-danger btn-sm me-1";
+            };
+
+            const btnAlta = document.createElement("button");
+            btnAlta.type = "button";
+            btnAlta.innerText = "Alta";
+            btnAlta.className = "btn btn-outline-danger btn-sm me-1";
+
+            btnAlta.onclick = function () {
+                btnBaixa.className = "btn btn-outline-success btn-sm me-1";
+                btnMedia.className = "btn btn-outline-warning btn-sm me-1";
+                btnAlta.className = "btn btn-danger btn-sm me-1";
+            };
+
+            tarefa.appendChild(titulo);
+            const grupo = document.createElement("div");
+            grupo.className = "mt-2";
+
+            grupo.appendChild(btnBaixa);
+            grupo.appendChild(btnMedia);
+            grupo.appendChild(btnAlta);
+
+            tarefa.appendChild(titulo);
+            tarefa.appendChild(grupo);
+
+            lista.appendChild(tarefa);
+
+            input.value = "";
+        }
+
+        input.addEventListener("keypress", function (e) {
+            if (e.key === "Enter") {
+                adicionarTarefa();
+            }
+        });
+    </script>
 </body>
 
 </html>
